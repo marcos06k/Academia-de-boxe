@@ -1,0 +1,211 @@
+body{
+    margin: 0;    
+}
+
+.flex_historia_academia{
+    display: flex;
+    width: 100%;
+    height: 700px;
+    justify-content: center;
+    margin-top: 5%;    
+}
+
+.historia_academia{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.abnt{
+    text-align: justify;
+    font-family: "Times New Roman", serif;
+    font-size: 13pt;
+    line-height: 1.2;
+    margin: 3% 3% 0 3%;
+}
+
+.flex_cards{
+    display: flex;
+    width: 100%;
+    height: 600px;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.div_cards{
+    display: flex;
+    flex-wrap: wrap;
+    width: 65%;
+    justify-content: center;
+}
+
+.div_cards_up{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.div_cards_below{
+    display: flex;
+    justify-content: space-evenly;
+    justify-self: center;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 220px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+.numero{
+    font-size: 40pt;
+    color: rgb(204,2,2);
+    font-weight: bold;
+}
+
+.texto{
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+.flex_locais{
+    display: flex;
+    margin-top: 5%;
+    width: 100%;
+    height: 350px;
+    justify-content: center;
+}
+
+.div_locais{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.locais{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;     
+}
+
+.flex_footer{
+    margin-top: 5%;
+    display: flex;
+    width: 100%;
+    height: 200px;
+    justify-content: center;
+    background-color: black;
+}
+
+.div_footer{
+    display: flex;
+    width: 65%;
+
+}
+
+.div_footer_left{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.div_footer_right{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.lista_footer{
+    list-style-type: none; 
+    display: flex;
+    flex-direction: column; 
+    
+}
+
+.li_footer{
+    text-decoration:none; 
+    color: rgb(204,2,2);
+    font-size: 13pt;
+    font-weight: bold;
+}
+
+.a_footer{
+    text-decoration: none;
+    color: rgb(204,2,2);
+}
+
+.flex_tabela{
+    margin-top: 5%;
+    margin-bottom: 15%;
+}
+
+.entre_em_contato{
+    background-color: rgb(204,2,2);
+    border-radius: 5px;
+    width: 20%;
+}
+.nav_itemms{
+    width: 20%;
+}
+
+.flex_cards_beneficios{
+    display: flex;
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 8%;
+    justify-content: center;
+}
+
+.div_cards_beneficios{
+    display: flex;
+    width: 80%;
+    
+}
+
+.div_cards_beneficios_left{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.div_cards_beneficios_right{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards_beneficios{
+    display: flex;
+    width: 80%;
+    border: 1px solid black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.campo_texto_beneficios{
+    width: 80%;
+}
+.cards_beneficios_left{
+    border-radius: 50px 5px 5px 50px;
+}
+
+.cards_beneficios_right{
+    border-radius: 5px 50px 50px 5px ;
+}
