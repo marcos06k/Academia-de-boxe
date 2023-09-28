@@ -54,30 +54,70 @@
                 <img src="assets/img/imc_produto_loja01.jpg" alt="" class="img_card_loja">
                 <h2 class="altura">Capacete De Treino</h2>
                 <p class="altura">R$ 150,00</p>
-                <button onclick="pegarProdutos('Capacete De Treino', 150)"  class="altura botao_card_loja">Comprar</button>
+                <button onclick="pegarNomeProdutos('Capacete De Treino'), pegarValorProdutos(150)"  class="altura botao_card_loja">Comprar</button>
             </div>
             <div class="card_loja">
                 <img src="assets/img/imc_produto_loja02.jpg" alt="" class="img_card_loja">
                 <h2 class="altura">Luva De Boxe Branca</h2>
                 <p class="altura">R$ 100,00</p>
-                <button onclick="pegarProdutos('Luva De Boxe Branca',100)" class="altura botao_card_loja">Comprar</button>
+                <button onclick="pegarNomeProdutos('Luva De Boxe Branca'), pegarValorProdutos(100)" class="altura botao_card_loja">Comprar</button>
             </div>
             <div class="card_loja">
                 <img src="assets/img/imc_produto_loja03.jpg" alt="" class="img_card_loja">
                 <h2 class="altura">Luxa De Boxe Azul</h2>
                 <p class="altura">R$ 120,00</p>
-                <button onclick="pegarProdutos('Luva De Boxe Azul',120)" class="altura botao_card_loja">Comprar</button>
+                <button onclick="pegarNomeProdutos('Luva De Boxe Azul'), pegarValorProdutos(120)" class="altura botao_card_loja">Comprar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+
+    <div class="flex_footer">
+        <div class="div_footer">
+            <div class="div_footer_left">
+                <ul class="lista_footer">
+                    <li class="li_footer">
+                        <a class="a_footer" href="https://www.instagram.com" target="_blank"> instagram</a>
+                    </li>
+                    <li class="li_footer">
+                        <a class="a_footer" href="https://www.facebook.com/?locale=pt_BR" target="_blank"> Facebook</a>
+                    </li>
+                    <li class="li_footer">
+                        <a class="a_footer" href="https://web.whatsapp.com" target="_blank"> whatszap</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="div_footer_right">
+                <ul class="lista_footer">
+                    <li class="li_footer">
+                        (51) 993233284 - Boxe Power | recepção
+                    </li>
+                    <li class="li_footer">
+                        (51) 982736540 - Boxe Power | administrativo
+                    </li>
+                    <li class="li_footer">
+                        boxepower@gmail.com
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
 
     <script> 
-    let arr = []
+    let arrayNome = []
+    let arrayValor = []
 
-    function pegarProdutos(produto, valor) {
-        arr.push(produto, valor)
-        console.log(arr)
-        localStorage.setItem("info", arr)
+    function pegarNomeProdutos(nome) {
+        arrayNome.push(nome)
+        console.log(arrayNome)
+        localStorage.setItem("arrayNome",  JSON.stringify(arrayNome))
+    }     
+        
+    function pegarValorProdutos(valor) {
+        arrayValor.push( valor)
+        console.log(arrayValor)
+        localStorage.setItem("arrayValor",  JSON.stringify(arrayValor))
     }     
         
     </script>
