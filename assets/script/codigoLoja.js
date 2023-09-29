@@ -15,13 +15,27 @@ console.log(arrayRecebidoValor);
     let valorTotalPedido = 0
 
     for (let i = 0; i < arrayRecebidoNome.length; i++) {
-        tabela.innerHTML += "<tr> <td>"+ arrayRecebidoNome[i] + "</td> <td> R$ "+ parseFloat(arrayRecebidoValor[i]).toFixed(2) + "</td> <td> N° "+ Math.floor(Math.random() * (pedidoMax - pedidoMin + 1) + pedidoMin) + "</td> </tr>"
-        console.log("t");
-        
+     
+        tabela.innerHTML += "<tr> <td>"+ arrayRecebidoNome[i] + "</td> <td> R$ "+ parseFloat(arrayRecebidoValor[i]).toFixed(2) + "</td>  <td>  <button onclick='removerItem("+i +")'> Remover</button></td> </tr>"
         valorTotalPedido += parseFloat(arrayRecebidoValor[i])
+    }
+    
+    tabela.innerHTML += "<tr> <td> Total: </td> <td> R$ "+ valorTotalPedido.toFixed(2) + "</td> <td></td> </tr>"
+    
+    let valor = 0
+    function removerItem(item){
+        tabela.innerHTML = ""
+
+        valorTotalPedido -= parseFloat(arrayRecebidoValor[item])
+
+        arrayRecebidoNome.splice(parseInt(item),1)
+        arrayRecebidoValor.splice(parseInt(item),1)
+
+        for (let i = 0; i < arrayRecebidoNome.length; i++) {
+            tabela.innerHTML += "<tr> <td>"+ arrayRecebidoNome[i] + "</td> <td> R$ "+ parseFloat(arrayRecebidoValor[i]).toFixed(2) + "</td>  <td>  <button onclick='removerItem("+i +")' style='width: 100px;height: 35px;border: none;color: white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: black;'> Remover</button></td> </tr>"
+        }
+        tabela.innerHTML += "<tr> <td> Total: </td> <td> R$ "+ (valorTotalPedido) + "</td> <td></td> </tr>"
     }
 
 
-     tabela.innerHTML += "<tr> <td> Total: </td> <td> R$ "+ valorTotalPedido.toFixed(2) + "</td> <td></td> </tr>"
-  
 
