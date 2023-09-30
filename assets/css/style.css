@@ -37,6 +37,7 @@ body{
     display: flex;
     flex-direction: column;
     width: 60%;
+    
 }
 
 #h1_cards{
@@ -46,7 +47,7 @@ body{
 .div_cards_up{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 
@@ -55,11 +56,11 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    
     width: 280px;
     height: 220px;
-    margin-top: 6%;
-
+    margin: 6% 3% 0% 3%;
+    
     border: 1px solid black;
     border-radius: 25px;
 }
