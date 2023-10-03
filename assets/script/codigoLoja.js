@@ -1,6 +1,6 @@
 
 let arrayRecebidoNomeString = localStorage.getItem('arrayNome');
-let arrayRecebidoNome= JSON.parse(arrayRecebidoNomeString);
+let arrayRecebidoNome = JSON.parse(arrayRecebidoNomeString);
 
 console.log(arrayRecebidoNome);
 
@@ -36,6 +36,46 @@ console.log(arrayRecebidoValor);
         }
         tabela.innerHTML += "<tr> <td> Total: </td> <td> R$ "+ (valorTotalPedido) + "</td> <td></td> </tr>"
     }
+
+    // grafico
+
+    const ctx = document.getElementById('myChart');
+          
+
+            let qtdItem1 = 0
+            let qtdItem2 = 0
+            let qtdItem3 = 0
+
+            for (let i = 0; i < arrayRecebidoValor.length; i++) {
+                if (arrayRecebidoValor[i] == 150) {
+                    qtdItem1 += 1
+                } else if (arrayRecebidoValor[i] == 100) {
+                    qtdItem2 += 1
+                } else if (arrayRecebidoValor[i] == 120) {
+                    qtdItem3 += 1
+                }
+            }
+            
+            
+
+            new Chart(ctx, {
+              type: 'bar',
+              data: {
+                labels: ['Capacete de Treino', 'Luva de Boxe Branca', 'Luva de Boxe Azul'],
+                datasets: [{
+                  label: '# of Votes',
+                  data: [qtdItem1, qtdItem2, qtdItem3],
+                  borderWidth: 1,
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            });
 
 
 
